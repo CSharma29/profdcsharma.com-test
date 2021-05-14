@@ -1,0 +1,14 @@
+{%extends "blog/base.html"%}
+
+{%block content%}
+<h1> {{post.title}} </h1>
+{{post.body|safe}}
+
+
+<h3> Posts that you might like! </h3>
+{%for rel_post in post_related%}
+<div class="related-posts">
+    <a href ="{%url 'blog:post_detail' rel_post.slug%}"><h4> {{rel_post.title}} </h4></a>
+</div>
+{%endfor%}
+{%endblock%}

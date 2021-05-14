@@ -1,0 +1,22 @@
+{%extends "blog/base.html"%}
+
+{%block content%}
+
+{%for post in posts%}
+    
+<div class="w3-third w3-container w3-margin-bottom">
+    <div class="w3-container w3-white">
+    <a href="{%url 'blog:post_detail' post.slug %}"><p><b>{{post.title}}</b></p></a>
+      <p>{{post.discreption}}</p>
+      {%for tags in post.tags.all%}
+      <a href="{%url 'blog:tagged' tags.slug %}">#{{tags}} </a>
+      {%endfor%}
+    </div>
+</div>
+
+
+
+
+{%endfor%}
+
+{%endblock%}
