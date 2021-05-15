@@ -1,6 +1,9 @@
+from django.core import paginator
 from django.shortcuts import redirect, render, get_object_or_404
 from django.views.generic import View, ListView, DeleteView, DetailView
 from django.template.defaultfilters import slugify
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 from .models import Post
 from .forms import Postform 
@@ -9,9 +12,12 @@ from taggit.models import Tag
 
 # Create your views here.
 
-class new_post(View):
+
+class new_post(LoginRequiredMixin, View):
     # Defining the templates and the initial fiels values
     template_name = "blog/new_post.html"
+    raise_exception=True
+    permission_denied_message = "You are not allowed here"
     form_class = Postform
     initial = {
         'title': 'Enter your title here',
@@ -33,10 +39,12 @@ class new_post(View):
             return redirect('blog:home')
         return render(request, self.template_name, {'form': form})
 
-def home_view(request):
-    posts = Post.objects.all()
-    common_tags = Post.tags.most_common()[:4]
-    return render(request, 'blog/home.html', {'posts': posts, 'common_tags': common_tags})
+class Home_view(ListView):
+    model = Post
+    template_name = 'blog/home.html'
+    context_object_name = 'posts'
+    paginate_by = 10
+    queryset = Post.objects.all()
 
 def tagged(request, slug):
     tag = get_object_or_404(Tag, slug=slug)
