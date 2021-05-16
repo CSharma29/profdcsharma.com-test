@@ -43,7 +43,7 @@ class Home_view(ListView):
     model = Post
     template_name = 'blog/home.html'
     context_object_name = 'posts'
-    paginate_by = 10
+    paginate_by = 18
     queryset = Post.objects.all()
 
 def tagged(request, slug):
