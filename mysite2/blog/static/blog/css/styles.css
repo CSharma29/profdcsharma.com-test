@@ -77,4 +77,31 @@
   }
 
 
-  
+.post-container
+  {
+    background-color: rgba(0, 0, 0, 0.301);
+    border-radius: 10px;
+    background-image: url("/static/blog/images/Instagram post - 1 (2).jpg");
+  }
+
+.tags
+{
+  border-radius: 10px;
+  background-color: rgb(84, 159, 209);
+  height: auto;
+  width: auto;
+}
+
+.post-detail-title
+{
+  text-align: center;
+  font-size: 45px;
+  font-weight: 600;
+}
+
+.post-detail-body
+{
+  font-size: 20px;
+  color: #0e0a0adc;
+  font-family: Opensans;
+}

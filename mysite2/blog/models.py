@@ -7,7 +7,7 @@ from ckeditor.fields import RichTextField
 
 class Post(models.Model):
     title = models.CharField(max_length=300, null=True)
-    discreption = models.CharField(max_length=100, null=True, blank=True)
+    discreption = models.CharField(max_length=700, null=True, blank=True)
     body = RichTextField(blank=True, null=True)
     slug = models.SlugField(unique=True, max_length=100)
     tags = TaggableManager()

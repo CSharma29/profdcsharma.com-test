@@ -1,12 +1,12 @@
 from django.core import paginator
 from django.shortcuts import redirect, render, get_object_or_404
-from django.views.generic import View, ListView, DeleteView, DetailView
+from django.views.generic import View, ListView, DeleteView, DetailView, UpdateView
 from django.template.defaultfilters import slugify
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 from .models import Post
-from .forms import Postform 
+from .forms import Postform, Postformset 
 
 from taggit.models import Tag
 
@@ -38,6 +38,11 @@ class new_post(LoginRequiredMixin, View):
             form.save_m2m()
             return redirect('blog:home')
         return render(request, self.template_name, {'form': form})
+
+class Update_post(LoginRequiredMixin,UpdateView):
+    model= Post
+    template_name = 'blog/update_post.html'
+    fields = {'title', 'discreption', 'tags', 'body'}
 
 class Home_view(ListView):
     model = Post
