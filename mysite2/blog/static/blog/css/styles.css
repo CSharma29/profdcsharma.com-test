@@ -121,3 +121,9 @@
   margin-left: 10px;
   margin-right: 10px;
 }
+
+.post-container
+{
+  background-color: white;
+  border-radius: 10px;
+}
