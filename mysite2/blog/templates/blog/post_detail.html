@@ -4,12 +4,14 @@
 
 <div class="post-detail-title"> {{post.title}} </div>
 <div class="post-detail-body">
-    {{post.body|safe}}
+    <div class="post-detail-content">
+        {{post.body|safe}}
+    </div>
 </div>
 
 
 
-<h3> Posts that you might like! </h3>
+<h2 class="related-posts-title"> Posts that you might like! </h2>
 {%for rel_post in post_related%}
 <div class="related-posts">
     <a href ="{%url 'blog:post_detail' rel_post.slug%}"><h4> {{rel_post.title}} </h4></a>

@@ -1,6 +1,6 @@
 from django.core import paginator
 from django.shortcuts import redirect, render, get_object_or_404
-from django.views.generic import View, ListView, DeleteView, DetailView, UpdateView
+from django.views.generic import View, ListView, DeleteView, DetailView, UpdateView, RedirectView
 from django.template.defaultfilters import slugify
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
@@ -50,6 +50,12 @@ class Home_view(ListView):
     context_object_name = 'posts'
     paginate_by = 18
     queryset = Post.objects.all()
+
+class wednesday_weekly(ListView):
+    model = Post
+    template_name = 'blog/wednesday_post.html'
+    context_object_name = 'wednesday_posts'
+    pass
 
 def tagged(request, slug):
     tag = get_object_or_404(Tag, slug=slug)
