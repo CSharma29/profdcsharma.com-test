@@ -1,0 +1,19 @@
+{%extends "blog/base.html"%}
+
+{%block header%}
+<div class="site-identifier">
+  Prof DC Sharma's Blog
+</div>
+{%endblock%}
+
+{%block content%}
+<div>
+    {%for help in corona_help%}
+    <div class = help-container>
+        <h5> <b> {{help.title}} </b> </h5>
+        <p> {{help.discreption}} </p>
+        <h7> {{help.contact}} </h7>
+    </div>
+    {%endfor%}
+</div>
+{%endblock%}

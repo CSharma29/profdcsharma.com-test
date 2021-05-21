@@ -126,4 +126,40 @@
 {
   background-color: white;
   border-radius: 10px;
+  min-height: 200px;
+  max-height: 200px;
+}
+
+@media only screen and (max-width:768px) {
+
+  .site-identifier
+  {
+    visibility: visible;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (min-width:1024px) 
+
+{
+
+  .site-identifier
+  {
+    visibility: hidden;
+    font-size: 0px;
+  }
+}
+
+.help-container
+{
+  height: auto;
+  width: auto;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 15px;
+  margin-right: 25px;
 }
