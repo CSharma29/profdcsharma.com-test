@@ -1,6 +1,6 @@
 from django import forms
 from django.forms import formset_factory
-from .models import Post
+from .models import Post, corona_help
 
 class Postform(forms.ModelForm):
     class Meta:
@@ -8,7 +8,16 @@ class Postform(forms.ModelForm):
         fields = [
             'title',
             'discreption',
+            'catagoery',
             'tags',
             'body',
         ]
-Postformset = formset_factory(Postform, extra=1)
+
+class Corona_help_form(forms.ModelForm):
+    class Meta:
+        model = corona_help
+        fields = [
+            'title',
+            'discreption',
+            'contact'
+        ]

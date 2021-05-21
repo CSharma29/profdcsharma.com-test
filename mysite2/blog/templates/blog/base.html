@@ -67,7 +67,16 @@
              <!-- Defining the menu items -->
              <div class="w3-bar-block">
                 <a href="{%url 'blog:home'%}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-home fa-fw w3-margin-right" aria-hidden="true"></i>Home</a> 
-
+                <a href="{%url 'blog:wednesday_weekly'%}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right" aria-hidden="true"></i>Wednesday Weekly</a>
+                <a href="{%url 'blog:khund_charcha'%}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right" aria-hidden="true"></i>Khund Charcha</a>
+                <a href="{%url 'blog:english_dalies'%}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-newspaper-o fa-fw w3-margin-right" aria-hidden="true"></i>English Dalies</a>
+                <a href="{%url 'blog:english_magazines'%}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-newspaper-o fa-fw w3-margin-right" aria-hidden="true"></i>English Magazines</a>
+                <a href="{%url 'blog:punjabi_dalies'%}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-newspaper-o fa-fw w3-margin-right" aria-hidden="true"></i>Punjabi Dalies</a>
+                <a href="{%url 'blog:punjabi_magazines'%}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-newspaper-o fa-fw w3-margin-right" aria-hidden="true"></i>Punjabi Magazines</a>
+                
+                {%if user.is_authenticated%}
+                <a href="{%url 'blog:add_new'%}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-plus-circle fa-fw w3-margin-right" aria-hidden="true"></i>Add a new post</a>
+                {%endif%}    
                 <!-- Add all the posts and the following list of pots here -->
 
             </div>
@@ -83,6 +92,13 @@
                 
             </div>
 
+            <div>
+                 <!-- Adding the urls for corona support -->
+                <a href="{%url 'blog:corona_help'%}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-medkit fa-fw w3-margin-right" aria-hidden="true"></i> Raise a help request </a>
+
+                 <a href="{%url 'blog:help_list'%}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-ambulance fa-fw w3-margin-right" aria-hidden="true"></i> See All help requests </a>
+            </div>
+
         </nav>
 
         <!-- Overlay effect when opening sidebar on small screens -->
@@ -96,6 +112,8 @@
         <header>  
             <a href="#"><img src="" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
             <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+            {%block header%}
+            {%endblock%}
         </header>
         
         <!-- The content block -->
