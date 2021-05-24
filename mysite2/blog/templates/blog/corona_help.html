@@ -7,20 +7,48 @@
 {%endblock%}
 
 {%block content%}
+
+<!-- The Corona Help form -->
+<div class="corona-parent">
+  <div class="corona-sub-parent">
+
     <form method="POST">
-        {%csrf_token%}
-        <table border="1">
-            {% for field in form.visible_fields %}
-              <tr>
-                <th>{{ field.label_tag }}</th>
-                <td>
-                  {{ field.errors }}
-                    {{ field }}
-                  {{ field.help_text }}
-                </td>
-              </tr>
-            {% endfor %}
-          </table>
-        <button type="submit"> Submit </button>
-    </form>
+    {%csrf_token%}
+
+    <span id="span-parent"> Fill in the below form to raise a help ticket </span>
+      
+        <div class="corona-form-title">
+          <span id="span"> Enter the title here </span>
+          <span id ="corona_form_title">
+            
+            {{form.title}}
+
+          </span> 
+                
+        </div>
+        <span id="span"> Tell us how can we help? </span>
+        <div class="corona-form-discreption">
+          <span id ="corona-form-discreption">
+            
+            {{form.discreption}}
+
+          </span> 
+        </div>
+
+        <span id="span"> Your contact? </span>
+        <div>
+          {{form.contact}}
+        </div>
+        
+        <span id="span"> </span>
+      <div id ="corona-submit-parent">
+          <button type="submit" id="raise-request"> Raise request </button>
+        
+      </div>  
+      
+  </form>
+  </div>
+
+</div>
+
 {%endblock%}
