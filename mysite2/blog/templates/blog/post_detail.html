@@ -1,9 +1,17 @@
 {%extends "blog/base.html"%}
 
-
 {%block content%}
 
 <div class="post-detail-title"> {{post.title}} </div>
+
+<div class="social-media-parent">
+    <div class="social-media-share-buttons">
+        <div class="share-text"> Share On</div>
+        <button type="button" onclick="facebook_share()" id="facebook"> Facebook </button>
+        <button type="button" onclick="whatsapp_share()" id="whatsapp"> whatsapp </button>
+    </div>
+</div>
+
 <div class="post-detail-body">
     <div class="post-detail-content">
         {{post.body|safe}}
@@ -14,7 +22,7 @@
 
 <h2 class="related-posts-title"> Posts that you might like! </h2>
 {%for rel_post in post_related%}
-<div class="related-posts">
+<div class="related-posts w3-animate-zoom">
     <a href ="{%url 'blog:post_detail' rel_post.slug%}"><h4> {{rel_post.title}} </h4></a>
 </div>
 {%endfor%}

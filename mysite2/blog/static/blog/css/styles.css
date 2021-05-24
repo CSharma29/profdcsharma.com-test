@@ -1,68 +1,3 @@
-/** Tested and working **/
-/*
- * bootstrap-tagsinput v0.8.0
- * 
- */
-
- .bootstrap-tagsinput {
-    border: solid 1px #e9ecee;
-  border-radius: 0;
-  color: #8e9091;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  height: 48px;
-  padding: 8px 20px;
-  font-size: 16px;
-  }
-  .bootstrap-tagsinput input {
-  border: none;
-  border-radius: 0;
-  color: #8e9091;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  
-  }
-  .badge-tag{
-    background-color: #17a2b8;
-    color: white;
-  }
-  .bootstrap-tagsinput.form-control input::-moz-placeholder {
-    color: #777;
-    opacity: 1;
-  }
-  .bootstrap-tagsinput.form-control input:-ms-input-placeholder {
-    color: #777;
-  }
-  .bootstrap-tagsinput.form-control input::-webkit-input-placeholder {
-    color: #777;
-  }
-  .bootstrap-tagsinput input:focus {
-    border: none;
-    box-shadow: none;
-  }
-  .bootstrap-tagsinput .badge {
-    margin-left: 4px;
-    padding:8px;
-  }
-  .bootstrap-tagsinput .badge [data-role="remove"] {
-    margin-left: 8px;
-    cursor: pointer;
-  }
-  .bootstrap-tagsinput .badge [data-role="remove"]:after {
-    content: "×";
-    padding: 0px 4px;
-    background-color:rgba(0, 0, 0, 0.1);
-    border-radius:50%;
-    font-size:13px
-  }
-  .bootstrap-tagsinput .badge [data-role="remove"]:hover:after {
-  
-    background-color:rgba(0, 0, 0, 0.62);}
-  .bootstrap-tagsinput .badge [data-role="remove"]:hover:active {
-    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  }
 
   .related-posts-title
   {
@@ -77,10 +12,10 @@
   {
     height: 50px;
     width: auto;
+    font-weight: 500;
     background-color: white;
     padding: 5px;
     color: rgb(24, 23, 23);
-    text-shadow: 2px 2px 4px #000000;
     margin-bottom: 5px;
 
   }
@@ -124,12 +59,21 @@
 
 .post-container
 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post-container-child
+{
   background-color: white;
   border-radius: 10px;
   min-height: 200px;
   max-height: 200px;
+  flex: 1 0 350px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
-
 @media only screen and (max-width:768px) {
 
   .site-identifier
@@ -162,4 +106,95 @@
   border-radius: 10px;
   margin-left: 15px;
   margin-right: 25px;
+}
+
+.social-media-parent
+{
+  margin-bottom: 10px;
+  padding: 10px;
+  display: grid;
+  place-items: center;
+  background-color: white;
+}
+
+
+.share-text
+{
+  font-weight: 200;
+  font-size: xx-large;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-left: 15px;
+}
+
+#facebook
+{
+  background-color: #3B5998;
+  color: white;
+}
+
+#whatsapp
+{
+  background-color: #25D366;
+  color: white;
+}
+
+.corona-parent
+{
+  display: grid;
+  place-items: center;
+  margin-top: 30px;
+}
+
+.corona-sub-parent
+{
+  background-color: white;
+  border-radius: 10px;
+}
+
+#span
+{
+  font-size: xx-large;
+  font-weight: 300;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#span-parent
+{
+  font-size: xx-large;
+  font-weight: 300;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+
+}
+
+.corona-form-title
+{
+  margin-bottom: 10px;
+}
+
+.corona-form-discreption
+{
+  margin-left: 0px;
+  margin-top: 10px;
+}
+
+#raise-request
+{
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+#corona-submit-parent
+{
+  display: grid;
+  place-items: center;
+
+}
+
+#raise-request
+{
+  background-color: yellowgreen;
+  color: black;
 }

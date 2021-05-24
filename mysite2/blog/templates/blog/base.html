@@ -78,12 +78,13 @@
                 <a href="{%url 'blog:add_new'%}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-plus-circle fa-fw w3-margin-right" aria-hidden="true"></i>Add a new post</a>
                 {%endif%}    
                 <!-- Add all the posts and the following list of pots here -->
-
+                <a href="https://www.facebook.com/dc.sharma.39948/" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right" aria-hidden="true"></i>About us </a>
             </div>
             <div class="w3-panel w3-large">
+                <b><span>Contact? hit us on social media </span><br></b>
                 <a href="https://www.facebook.com/dc.sharma.39948/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
                 <a href="https://chat.whatsapp.com/FVWyasUIvSDIFwpIcrH3Fs"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-                
+
                 <!--<i class="fa fa-instagram w3-hover-opacity"></i>-->
                 <!--<i class="fa fa-snapchat w3-hover-opacity"></i>-->
                 <!--<i class="fa fa-pinterest-p w3-hover-opacity"></i>-->
@@ -112,6 +113,8 @@
         <header>  
             <a href="#"><img src="" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
             <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+            
+            <!-- The Social media menu -->
             {%block header%}
             {%endblock%}
         </header>
@@ -123,5 +126,21 @@
 
         <!-- The footer block to put our pagination content -->
     </body>
+
+<!-- Scripts for facebbok and whatsapp share -->
+    <script>
+        function facebook_share(){
+  
+            let facebook_share_url = "http://www.facebook.com/sharer.php?u=" + window.location.href;
+            window.location.assign(facebook_share_url)
+            window.location=facebook_share_url   
+        }
+  
+        function whatsapp_share(){
+          let whatsapp_share_url = "https://api.whatsapp.com/send?phone=whatsappphonenumber&text=urlencodedtext" + window.location.href;
+          window.location.assign(whatsapp_share_url)
+          window.location=whatsapp_share_url
+        }
+      </script>
 
 </html>

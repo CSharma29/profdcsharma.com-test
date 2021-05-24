@@ -48,6 +48,9 @@ class Update_post(LoginRequiredMixin,UpdateView):
     template_name = 'blog/update_post.html'
     fields = {'title', 'discreption', 'tags', 'body'}
 
+class about_us(ListView):
+    template_name = 'blog/about_us.html'    
+
 class Home_view(ListView):
     model = Post
     template_name = 'blog/home.html'
@@ -128,9 +131,9 @@ class corona_post(View):
     template_name = "blog/corona_help.html"
     form_class = Corona_help_form
     initial = {
-        'title': 'Briefly tell what type of help you want',
-        'discreption': 'Tell us in detail what is your issue so that people can relate and help you out in the same',
-        'contact': 'Provide us your contact number with country code e.g +91 6657XXXXXX for India'
+        'title': 'Title of the post',
+        'discreption': 'Tell us in detail what is your issue so that people can relate and help you out in the same provide your social media links here so people can contact at your ease.',
+        'contact': ' e.g +91 6657XXXXXX '
     }
 
     def get(self, request):
@@ -142,7 +145,7 @@ class corona_post(View):
         if form.is_valid():
             new_request = form.save(commit=False)
             new_request.save()
-            return redirect('blog:home')
+            return redirect('blog:help_list')
         return render(request, self.template_name, {'form': form})
 
 class corona_help_posts(ListView):
