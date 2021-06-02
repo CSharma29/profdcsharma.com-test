@@ -1,21 +1,24 @@
+.related-posts-title
+{
+  display: grid;
+  place-items: center;
+  background-color: white;
+  border-radius: 20px;
 
-  .related-posts-title
-  {
-    text-align: center;
-    background-color: white;
-    border-radius: 5px;
 
-  }
-  
-  
-  .related-posts
+}
+
+ .related-posts
   {
+    display: grid;
+    place-items: center;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.103);
     height: 50px;
     width: auto;
     font-weight: 500;
-    background-color: white;
     padding: 5px;
-    color: rgb(24, 23, 23);
+    color: black;
     margin-bottom: 5px;
 
   }
@@ -23,7 +26,7 @@
 .tags
 {
   border-radius: 5px;
-  background-color: rgb(199, 227, 245);
+  background-color: rgba(199, 227, 245, 0.212);
   height: auto;
   width: auto;
   font-weight: 600;
@@ -98,14 +101,29 @@
   }
 }
 
-.help-container
+#help-container-parent
 {
-  height: auto;
-  width: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#help-container-child
+{
   background-color: white;
   border-radius: 10px;
-  margin-left: 15px;
-  margin-right: 25px;
+  min-height: 200px;
+  max-height: 200px;
+  flex: 1 0 350px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.post-container-child
+{
+  padding: 10px;
+  flex: 1 0 350px;
+  margin-top: 5px;
 }
 
 .social-media-parent
@@ -124,18 +142,6 @@
   font-size: xx-large;
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin-left: 15px;
-}
-
-#facebook
-{
-  background-color: #3B5998;
-  color: white;
-}
-
-#whatsapp
-{
-  background-color: #25D366;
-  color: white;
 }
 
 .corona-parent
@@ -197,4 +203,43 @@
 {
   background-color: yellowgreen;
   color: black;
+}
+
+#post-picture
+{
+  
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+#post-title
+{
+  text-align: center;
+  border-radius: 10px;
+  color: black;
+}
+
+
+.read-more
+{
+  color: black;
+  margin-top: 10px;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 255, 0.349);
+  font-size: 18px;
+  font-weight: 300;
+}
+
+#facebook
+{
+  background-color: #4571cabe;
+}
+
+#whatsapp
+{
+  background-color: #128c7eb0;
 }

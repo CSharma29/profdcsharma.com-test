@@ -1,5 +1,5 @@
 {%extends "blog/base.html"%}
-
+{%load crispy_forms_tags %}
 {%block header%}
 <div class="site-identifier">
   Prof DC Sharma's Blog
@@ -16,31 +16,8 @@
     {%csrf_token%}
 
     <span id="span-parent"> Fill in the below form to raise a help ticket </span>
-      
-        <div class="corona-form-title">
-          <span id="span"> Enter the title here </span>
-          <span id ="corona_form_title">
-            
-            {{form.title}}
-
-          </span> 
-                
-        </div>
-        <span id="span"> Tell us how can we help? </span>
-        <div class="corona-form-discreption">
-          <span id ="corona-form-discreption">
-            
-            {{form.discreption}}
-
-          </span> 
-        </div>
-
-        <span id="span"> Your contact? </span>
-        <div>
-          {{form.contact}}
-        </div>
-        
-        <span id="span"> </span>
+    {{form|crispy}}
+    {{form.media}}
       <div id ="corona-submit-parent">
           <button type="submit" id="raise-request"> Raise request </button>
         

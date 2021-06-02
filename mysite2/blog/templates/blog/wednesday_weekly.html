@@ -1,5 +1,9 @@
 {%extends "blog/base.html"%}
 
+{%block SEO%}
+<title> wednesday_weekly </title>
+{%endblock%}
+
 {%block header%}
 <div class="site-identifier">
   Prof DC Sharma's Blog
@@ -11,11 +15,13 @@
 <div class="post-container  w3-animate-zoom">
   {%for post in wednesday_weekly%}
     <div class="post-container-child w3-animate-zoom">
-      <div style="text-align: center;"> <a href="{%url 'blog:post_detail' post.slug %}"><h3><b>{{post.title}}</b></h3></a> </div>  
+      <div id="post-title"> <a href="{%url 'blog:post_detail' post.slug %}"><h3><b>{{post.title}}</b></h3></a> </div>  
           <p style="text-align: left;">{{post.discreption}}</p>
           {%for tags in post.tags.all%}
             <a href="{%url 'blog:tagged' tags.slug %}"><span class = "tags">#{{tags}}</span> </a>
           {%endfor%}
+          <br>
+          <a href="{%url 'blog:post_detail' post.slug %}" class="read-more"> Read More </a>
     </div>
   {%endfor%}
   

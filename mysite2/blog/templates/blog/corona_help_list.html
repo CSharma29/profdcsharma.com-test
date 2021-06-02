@@ -7,13 +7,13 @@
 {%endblock%}
 
 {%block content%}
-<div>
+<div id ="help-container-parent" class= w3-animate>
     {%for help in corona_help%}
-    <div class = help-container>
-        <h5> <b> {{help.title}} </b> </h5>
+      <div id="help-container-child">
+        <h3> <b> {{help.title}} </b> </h3>
         <p> {{help.discreption}} </p>
         <h7> {{help.contact}} </h7>
-    </div>
+      </div>
     {%endfor%}
 </div>
 {%endblock%}

@@ -153,3 +153,6 @@ class corona_help_posts(ListView):
     template_name = 'blog/corona_help_list.html'
     queryset = corona_help.objects.all()
     context_object_name = 'corona_help'
+
+class corona_help_deatil_view(DetailView):
+    model = corona_help

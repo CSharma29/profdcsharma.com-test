@@ -1,11 +1,12 @@
 {% load static %}
 
+
 <!DOCTYPE html>
 
 <html lang ='en'>
     <head>
         <!-- Defining the title block -->
-        {%block title%}
+        {%block SEO%}
         {%endblock%}
 
         <style>
@@ -14,7 +15,7 @@
             }
         </style>
 
-        <link rel="shortcut icon" href=""
+        <link rel="shortcut icon" href="">
         
         <!-- Defining the view port -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,6 +27,9 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+         <!-- Linking to the bootstrap stylesheet -->
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
         <!-- Adding styles specific to the page -->
         <style>
@@ -58,10 +62,10 @@
                 <i class="fa fa-remove"></i>
                 </a>
                 <!-- The side bar image -->
-                <img src="{%static 'blog/images/positive-attitude.png'%}" style="width:45%;" class="w3-round"><br><br>
+                <img src="{%static 'blog/images/positive-attitude.png'%}" style="width:45%;" class="w3-round" alt="prof dc sharma, life, career, counselling"> <br><br>
                 <!-- Defining the site identity -->
                 <h4><b>Prof. DC Sharmas Blog</b></h4>
-                <p class="w3-text-grey">profdcsharma.com</p>
+                <p class="w3-text-black">profdcsharma.com</p>
             </div class="test">
 
              <!-- Defining the menu items -->
@@ -82,8 +86,8 @@
             </div>
             <div class="w3-panel w3-large">
                 <b><span>Contact? hit us on social media </span><br></b>
-                <a href="https://www.facebook.com/dc.sharma.39948/"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-                <a href="https://chat.whatsapp.com/FVWyasUIvSDIFwpIcrH3Fs"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/dc.sharma.39948/" id ="facebook-base"><i class="fa fa-facebook-official w3-hover-opacity"></i> Facebook</a><br>
+                <a href="https://chat.whatsapp.com/FVWyasUIvSDIFwpIcrH3Fs" id="whatsapp-base"><i class="fa fa-whatsapp" aria-hidden="true"></i> whatsapp</a>
 
                 <!--<i class="fa fa-instagram w3-hover-opacity"></i>-->
                 <!--<i class="fa fa-snapchat w3-hover-opacity"></i>-->

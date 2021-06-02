@@ -1,5 +1,11 @@
 {%extends "blog/base.html"%}
 
+{%block SEO%}
+<title> {{post.title}} </title>
+<meta name="discreption" content="{{post.discreption}}">
+<mata name="keywords" content="{{post.tags}}">
+{%endblock%}
+
 {%block content%}
 
 <div class="post-detail-title"> {{post.title}} </div>

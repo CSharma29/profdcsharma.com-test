@@ -5,6 +5,7 @@ from django.db.models.signals import pre_save
 from django.dispatch import receiver
 from django.utils import timezone
 from ckeditor.fields import RichTextField
+from uuid import uuid4
 # Create your models here.
 
 class Post(models.Model):
@@ -26,12 +27,9 @@ class Post(models.Model):
 
 class corona_help(models.Model):
     title = models.CharField(max_length=300, blank=False, null=False)
-    discreption = models.TextField(blank=False, null=False)
+    discreption = RichTextField(blank=False, null=False)
     contact = models.CharField(max_length =1000 ,blank=True, null=True)
     published_date = models.DateTimeField(default=timezone.now(), blank=True, null=True)
 
-    
-    
     def __str__(self):
         return self.title
-

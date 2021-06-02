@@ -15,7 +15,10 @@ import signal
 
 from django.core.wsgi import get_wsgi_application
 
+# Path to the project
 sys.path.append('/var/www/vhosts/profdcsharma.com-test/mysite2')
+
+# path to the site packages
 sys.path.append('/var/www/vhosts/profdcsharma.com-test/mysite2/venv/lib/python3/site-packages')
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite2.settings')
 
