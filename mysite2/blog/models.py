@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.base import Model
 from django.template.defaultfilters import default
 from taggit.managers import TaggableManager
 from django.db.models.signals import pre_save
@@ -33,3 +34,6 @@ class corona_help(models.Model):
 
     def __str__(self):
         return self.title
+
+class comments(models.Model):
+    pass
