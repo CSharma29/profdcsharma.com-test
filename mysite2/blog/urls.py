@@ -1,5 +1,6 @@
 from os import name
 from django.urls import path
+from django.views.generic.base import RedirectView
 from . import views
 
 app_name = 'blog'
@@ -19,6 +20,4 @@ urlpatterns = [
     path('help/', views.corona_post.as_view(), name='corona_help'),
     path('list/', views.corona_help_posts.as_view(), name='help_list'),
     path('help_detail/<int:pk>', views.corona_help_detail_view.as_view(), name='help_detail'),
-
-
 ]

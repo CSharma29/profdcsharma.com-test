@@ -11,10 +11,8 @@
 
  .related-posts
   {
-    display: grid;
-    place-items: center;
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.103);
+    border-radius: 5px;
+    background-color: white;
     height: 50px;
     width: auto;
     font-weight: 500;
