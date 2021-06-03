@@ -4,6 +4,7 @@
   place-items: center;
   background-color: white;
   border-radius: 20px;
+  margin-top: 20px;
 
 
 }
@@ -253,4 +254,11 @@
 #help-description
 {
   font-size: 20px;
+}
+
+#post-deatil-social-media
+{
+  margin-left: 10px;
+  display: inline;
+  place-items: center;
 }
