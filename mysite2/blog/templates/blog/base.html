@@ -141,9 +141,8 @@
         }
   
         function whatsapp_share(){
-          let whatsapp_share_url = "https://api.whatsapp.com/send?phone=whatsappphonenumber&text=" + "Hey checkout this amazing article on profdcsharma.com      ->" + window.location.href;
-          window.location.assign(whatsapp_share_url)
-          window.location=whatsapp_share_url
+          let whatsapp_share_url = "whatsapp://send?text=" + "Hey checkout this amazing article on profdcsharma.com      ->" + window.location.href;
+          window.open(whatsapp_share_url)
         }
       </script>
 
