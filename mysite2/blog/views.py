@@ -118,7 +118,7 @@ def tagged(request, slug):
 
 def post_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
-    post_related = post.tags.similar_objects()
+    post_related = post.tags.similar_objects()[:8]
     context = {
         'post': post,
         'post_related': post_related,
@@ -154,5 +154,6 @@ class corona_help_posts(ListView):
     queryset = corona_help.objects.all()
     context_object_name = 'corona_help'
 
-class corona_help_deatil_view(DetailView):
+class corona_help_detail_view(DetailView):
     model = corona_help
+    template_name= 'blog/help_detail.html'

@@ -70,8 +70,8 @@
 {
   background-color: white;
   border-radius: 10px;
-  min-height: 200px;
-  max-height: 200px;
+  min-height: 225px;
+  max-height: 225px;
   flex: 1 0 350px;
   margin-left: 10px;
   margin-right: 10px;
@@ -236,10 +236,21 @@
 
 #facebook
 {
-  background-color: #4571cabe;
+  background-color: #4571caca;
 }
 
 #whatsapp
 {
-  background-color: #128c7eb0;
+  background-color: #128c7ed7;
+}
+
+#help-container
+{
+  display: grid;
+  place-items: center;
+  background-color: white;
+}
+#help-description
+{
+  font-size: 20px;
 }

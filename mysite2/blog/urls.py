@@ -18,4 +18,7 @@ urlpatterns = [
     path('post/<slug:slug>/', views.Update_post.as_view(), name='update_post'),
     path('help/', views.corona_post.as_view(), name='corona_help'),
     path('list/', views.corona_help_posts.as_view(), name='help_list'),
+    path('help_detail/<int:pk>', views.corona_help_detail_view.as_view(), name='help_detail'),
+
+
 ]
