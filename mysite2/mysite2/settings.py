@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'taggit',
     'ckeditor',
     'crispy_forms',
+    'google_analytics',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +140,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# Adding the unique code for analytics
+GOOGLE_ANALYTICS = {
+    'google_analytics_id': 'UA-195922535-1',
+}

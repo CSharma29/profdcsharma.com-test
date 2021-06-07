@@ -18,10 +18,12 @@ from django.urls import path, include
 
 from django.conf.urls.static import static
 from django.conf import settings
+from django.urls.conf import re_path
 
 urlpatterns = [
     path('pappuadmin/', admin.site.urls),
     path('', include('blog.urls')),
+    re_path('djga/', include('google_analytics.urls')),
 ]
 
 if settings.DEBUG:

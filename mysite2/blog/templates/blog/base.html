@@ -9,6 +9,9 @@
         {%block SEO%}
         {%endblock%}
 
+        <!-- Adding the copy right-->
+        <meta name="Copyright" content="Professor DC Sharma Blog" />
+
         <style>
             body{
                 background-color: white;
@@ -149,4 +152,9 @@
         }
       </script>
 
+      <!-- Adding the google analytics application -->
+      {% load google_analytics_tags %}
+      <div style="display:none">
+          <img src="{% google_analytics %}" width="0" height="0" />
+      </div>
 </html>
