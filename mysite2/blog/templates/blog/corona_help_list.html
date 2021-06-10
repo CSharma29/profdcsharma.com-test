@@ -1,5 +1,10 @@
 {%extends "blog/base.html"%}
 
+<!-- Doing the SEO block-->
+{%block SEO%}
+    <meta name="description" content="Visit this page to extend a helping hand in the present situation">
+{%endblock%}
+
 {%block header%}
 <div class="site-identifier">
   Prof DC Sharma's Blog
@@ -12,7 +17,7 @@
       <div id="help-container-child">
         <h3> <b> {{help.title}} </b> </h3>
         <h7 style="margin-top: 10px;"> {{help.contact}} </h7>
-        <a href="{%url 'blog:help_detail' help.pk %}" class="read-more" style="margin-top: 10px;"> Read More </a>
+        <a href="{%url 'blog:help_detail' help.pk %}" class="read-more" style="margin-top: 10px;"> Read Complete Post. </a>
       </div>
     {%endfor%}
 </div>

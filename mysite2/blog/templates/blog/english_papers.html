@@ -2,6 +2,7 @@
 
 {%block SEO%}
 <title> english_dalies </title>
+<meta name="description" content = "Browse through the list of pieces published in reputed english news-papers">
 {%endblock%}
 
 {%block header%}
@@ -20,7 +21,7 @@
             <a href="{%url 'blog:tagged' tags.slug %}"><span class = "tags">#{{tags}}</span> </a>
           {%endfor%}
           <br>
-          <a href="{%url 'blog:post_detail' post.slug %}" class="read-more"> Read More </a>
+          <a href="{%url 'blog:post_detail' post.slug %}" class="read-more"> Read Complete Article. </a>
     </div>
   {%endfor%}
   

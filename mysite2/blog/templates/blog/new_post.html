@@ -1,5 +1,13 @@
 {%extends "blog/base.html" %}
 
+{%load crispy_forms_tags %}
+
+<!-- Doing the SEO block-->
+{%block SEO%}
+    <meta name="description" content="This is the page to add new posts only accesible to the admins of this website.">
+{%endblock%}
+
+
 {%block header%}
 <div class="site-identifier">
   Prof DC Sharma's Blog
@@ -7,12 +15,13 @@
 {%endblock%}
 
 
+
 {%block content%}
     <form method="POST">
         {%csrf_token%}
         {{form.media}}
         <div class="new-post">
-            {{form.as_p}}
+            {{form.crispy}}
         </div>
         <button type="submit"> Submit </button>
     </form>

@@ -2,6 +2,7 @@
 
 {%block SEO%}
 <title> Khund_charcha </title>
+<meta name="description" content = "Get the latest from us every sunday in punjabi, join us for khund charcha this sunday">
 {%endblock%}
 {%block header%}
 <div class="site-identifier">
@@ -20,7 +21,7 @@
             <a href="{%url 'blog:tagged' tags.slug %}"><span class = "tags">#{{tags}}</span> </a>
           {%endfor%}
           <br>
-          <a href="{%url 'blog:post_detail' post.slug %}" class="read-more"> Read More </a>
+          <a href="{%url 'blog:post_detail' post.slug %}" class="read-more"> Read Complete Article.</a>
     </div>
   {%endfor%}
   

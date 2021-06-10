@@ -31,6 +31,7 @@
   font-weight: 600;
   font-family: 'Times New Roman', Times, serif;
   align-items: left;
+  font-size: 18px;
 }
 
 .post-detail-title
@@ -69,8 +70,8 @@
 {
   background-color: white;
   border-radius: 10px;
-  min-height: 225px;
-  max-height: 225px;
+  min-height: 250px;
+  max-height: 250px;
   flex: 1 0 350px;
   margin-left: 10px;
   margin-right: 10px;
@@ -231,6 +232,7 @@
   background-color: rgba(0, 0, 255, 0.349);
   font-size: 18px;
   font-weight: 300;
+  bottom: 0;
 }
 
 #facebook

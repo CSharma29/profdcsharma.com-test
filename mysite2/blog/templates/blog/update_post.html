@@ -1,5 +1,9 @@
 {%extends "blog/base.html" %}
 
+{%block SEO%}
+<meta name="description" content = "Update the post but this route is admin accesible and not available for general public on the web">
+{%endblock%}
+
 {%block content%}
     <form method="POST">
         {%csrf_token%}
