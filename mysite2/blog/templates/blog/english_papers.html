@@ -34,9 +34,9 @@
       {%if is_paginated %}
     
         {% if page_obj.has_previous %}
-        <span style="font-size: 40px; padding: 10px;"> <a href="?page={{page_obj.previous_page_number}}"> &laquo; </a> </span>
+        <span style="font-size: 25px; padding: 10px;"> <a href="?page={{page_obj.previous_page_number}}"> &laquo; </a> </span>
         {% else %}
-          <span style="font-size: 40px; padding: 10px;"> &laquo; </span>
+          <span style="font-size: 25px; padding: 10px;"> &laquo; </span>
         {% endif %}
     
         {%for i in paginator.page_range %}
