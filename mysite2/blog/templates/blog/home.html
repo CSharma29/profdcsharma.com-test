@@ -44,7 +44,8 @@
       {% endif %}
 
       {%for i in paginator.page_range %}
-        {%if page_obj.number == i%}
+        
+      {%if page_obj.number == i%}
           <span style="font-size: 25px; padding: 10px;"> {{i}} </span>
         {% else %}
         <span style="font-size: 25px; padding: 10px;"> <a href ="?page={{i}}">{{i}}</a> </span>

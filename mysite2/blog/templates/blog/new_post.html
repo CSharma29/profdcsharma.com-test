@@ -21,7 +21,7 @@
         {%csrf_token%}
         {{form.media}}
         <div class="new-post">
-            {{form}}
+            {{form.as_p}}
         </div>
         <button type="submit"> Submit </button>
     </form>

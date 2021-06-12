@@ -9,11 +9,20 @@ from ckeditor.fields import RichTextField
 from uuid import uuid4
 # Create your models here.
 
+catagoery_choices = (
+    ('wednesday_weekly', 'WEDNESDAY_WEEKLY'),
+    ('english_dalies', 'ENGLISH_DALIES'),
+    ('english_magazines', 'ENGLISH_MAGAZINES'),
+    ('punjabi_dalies', 'PUNJABI_DALIES'),
+    ('punjabi_magazines', 'PUNJABI_MAGAZINES'),
+    ('khund_charcha', 'KHUND_CHARCHA'),
+)
+
 class Post(models.Model):
     title = models.CharField(max_length=100, null=True)
     discreption = models.CharField(max_length=130, null=True, blank=True)
     body = RichTextField(blank=True, null=True)
-    catagoery = models.CharField(max_length=200, null=True, blank=True)
+    catagoery = models.CharField(max_length = 100, choices=catagoery_choices, default='wednesday_weekly', null=True, blank=True)
     slug = models.SlugField(unique=True, max_length=100)
     tags = TaggableManager()
     created_date = models.DateTimeField(default=timezone.now)

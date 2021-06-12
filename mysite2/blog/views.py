@@ -5,6 +5,7 @@ from django.template.defaultfilters import slugify
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.utils import timezone
+from django.views.generic.base import TemplateView
 
 from .models import Post, corona_help
 from .forms import Postform, Corona_help_form
@@ -157,3 +158,6 @@ class corona_help_posts(ListView):
 class corona_help_detail_view(DetailView):
     model = corona_help
     template_name= 'blog/help_detail.html'
+
+class about_us(TemplateView):
+    template_name = 'blog/about_us.html'
