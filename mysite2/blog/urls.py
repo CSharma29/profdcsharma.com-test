@@ -20,4 +20,5 @@ urlpatterns = [
     path('help/', views.corona_post.as_view(), name='corona_help'),
     path('list/', views.corona_help_posts.as_view(), name='help_list'),
     path('help_detail/<int:pk>', views.corona_help_detail_view.as_view(), name='help_detail'),
+    path('about-us/', views.about_us.as_view(), name='about-us'),
 ]

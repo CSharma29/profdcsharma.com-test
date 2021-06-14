@@ -160,4 +160,4 @@ class corona_help_detail_view(DetailView):
     template_name= 'blog/help_detail.html'
 
 class about_us(TemplateView):
-    template_name = 'blog/about_us.html'
+    template_name = 'blog/about-us.html'
