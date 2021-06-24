@@ -30,20 +30,14 @@
         
         <!-- Creating the navigation bar -->
 <div class="topnav" id="top-nav-bar">
-    <a href = "{%url 'blog:home'%}"> <i class="fa fa-home" aria-hidden="true"></i> Home </a>
-    <a href = "{%url 'blog:wednesday_weekly'%}"><i class="fa fa-envelope fa-fw w3-margin-right" aria-hidden="true"></i>Wednesday Weekly</a>
-    <a href="{%url 'blog:khund_charcha'%}"><i class="fa fa-envelope fa-fw w3-margin-right" aria-hidden="true"></i> Khund Charcha </a>
-    <a href = "{%url 'blog:english_dalies' %}">
-        <i class="fa fa-envelope fa-fw w3-margin-right" aria-hidden="true"></i>
-        English Dalies
-    </a>
-
-    {%if user.is_authenticated%}
-
-    <a href="{%url 'blog:add_new'%}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-plus-circle fa-fw w3-margin-right" aria-hidden="true"></i>Add a new post</a>
-    
+    {%if user.is_authenticated %}
+    <a href = "{%url 'blog:home'%}"> Home </a>
+    <a href = "{%url 'blog:wednesday_weekly'%}">Wednesday Weekly</a>
+    <a href = "{%url 'users:user-profile'%}"> Profile </a>
+    {% else %}
+    <a href = "{%url 'users:register'%}"> Register </a>
+    <a href = "{%url 'users:login'%}"> Login </a>
     {%endif%}
-
     <a class="icon" onclick="myFunction()"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
         </a>
 
