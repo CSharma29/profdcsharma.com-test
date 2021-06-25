@@ -10,12 +10,12 @@ from uuid import uuid4
 # Create your models here.
 
 catagoery_choices = (
-    ('wednesday_weekly', 'WEDNESDAY_WEEKLY'),
-    ('english_dalies', 'ENGLISH_DALIES'),
-    ('english_magazines', 'ENGLISH_MAGAZINES'),
-    ('punjabi_dalies', 'PUNJABI_DALIES'),
-    ('punjabi_magazines', 'PUNJABI_MAGAZINES'),
-    ('khund_charcha', 'KHUND_CHARCHA'),
+    ('career_tips', 'CAREER_TIPS'),
+    ('life_style', 'LIFE_STYLE'),
+    ('education', 'EDUCATION'),
+    ('psychology', 'PSYCHOLOGY'),
+    ('language', 'LANGUAGE'),
+    ('behaviour', 'BEHAVIOUR'),
 )
 
 class Post(models.Model):

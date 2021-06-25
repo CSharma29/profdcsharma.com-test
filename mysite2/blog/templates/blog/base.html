@@ -31,11 +31,29 @@
         <!-- Creating the navigation bar -->
 <div class="topnav" id="top-nav-bar">
     <a href = "{%url 'blog:home'%}"> <i class="fa fa-home" aria-hidden="true"></i> Home </a>
-    <a href = "{%url 'blog:wednesday_weekly'%}"><i class="fa fa-envelope fa-fw w3-margin-right" aria-hidden="true"></i>Wednesday Weekly</a>
-    <a href="{%url 'blog:khund_charcha'%}"><i class="fa fa-envelope fa-fw w3-margin-right" aria-hidden="true"></i> Khund Charcha </a>
-    <a href = "{%url 'blog:english_dalies' %}">
-        <i class="fa fa-envelope fa-fw w3-margin-right" aria-hidden="true"></i>
-        English Dalies
+    <!-- Career tips-->
+    <a href = "{%url 'blog:career_tips'%}"><i class="fa fa-envelope fa-fw w3-margin-right" aria-hidden="true"></i>Career Tips</a>
+    <!-- Education tips -->
+    <a href="{%url 'blog:education'%}"><i class="fa fa-envelope fa-fw w3-margin-right" aria-hidden="true"></i> Education </a>
+    <!-- Life Style -->
+    <a href = "{%url 'blog:life_style' %}">
+        <i class="fa fa-envelope fa-fw" aria-hidden="true"></i>
+        Life Style
+    </a>
+
+    <!-- For psychology -->
+    <a href="{%url 'blog:psychology' %}"> <i class="fa fa-envelope fa-fw " aria-hidden="true"></i>
+        Psychology
+    </a>
+
+    <!-- For Language -->
+    <a href="{%url 'blog:language' %}"> <i class="fa fa-envelope fa-fw " aria-hidden="true"></i>
+        Language
+    </a>
+
+    <!-- For Behaviour -->
+    <a href="{%url 'blog:behaviour' %}"> <i class="fa fa-envelope fa-fw " aria-hidden="true"></i>
+        Behaviour
     </a>
 
     {%if user.is_authenticated%}

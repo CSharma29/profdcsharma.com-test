@@ -7,12 +7,18 @@ app_name = 'blog'
 
 urlpatterns = [
     path('', views.Home_view.as_view(), name='home'),
-    path('wednesday_post/', views.wednesday_weekly.as_view(), name='wednesday_weekly'),
-    path('khund_charcha/', views.khund_charcha.as_view(), name='khund_charcha'),
-    path('english_dalies/', views.english_dalies.as_view(), name='english_dalies'),
-    path('english_magazines/', views.english_magazines.as_view(), name='english_magazines'),
-    path('punjabi_dalies/', views.punjabi_dalies.as_view(), name='punjabi_dalies'),
-    path('punjabi_magazines/', views.punjabi_magazines.as_view(), name='punjabi_magazines'),
+    # Career tips view
+    path('career_tips/', views.Career_Tips.as_view(), name='career_tips'),
+    # Education
+    path('education/', views.education.as_view(), name='education'),
+    # life style view
+    path('life_style/', views.life_style.as_view(), name='life_style'),
+    # For behaviour
+    path('behaviour/', views.Behaviour.as_view(), name='behaviour'),
+    # for Psychology
+    path('psychology/', views.Psychology.as_view(), name='psychology'),
+    # for language
+    path('language/', views.Language.as_view(), name='language'),
     path('new/', views.new_post.as_view(), name='add_new'),
     path('tag/<slug:slug>/', views.tagged, name='tagged'),
     path('post_detail/<slug:slug>/', views.post_detail, name='post_detail'),

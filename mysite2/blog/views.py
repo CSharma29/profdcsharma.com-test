@@ -56,55 +56,57 @@ class Home_view(ListView):
     model = Post
     template_name = 'blog/home.html'
     context_object_name = 'posts'
-    paginate_by = 9
+    paginate_by = 15
     queryset = Post.objects.all().order_by('-published_date')
 
-class wednesday_weekly(ListView):
+# For the career tips
+class Career_Tips(ListView):
     model = Post
-    template_name = 'blog/wednesday_weekly.html'
-    queryset = Post.objects.filter(catagoery="wednesday_weekly")
-    context_object_name = 'wednesday_weekly'
-    paginate_by = 9
+    template_name = 'blog/career_tips.html'
+    queryset = Post.objects.filter(catagoery="career_tips")
+    context_object_name = 'career_tips'
+    paginate_by = 15
 
-class khund_charcha(ListView):
+# For the education
+class education(ListView):
     model = Post
-    template_name = 'blog/khund_charcha.html'
-    queryset = Post.objects.filter(catagoery='khund_charcha')
-    context_object_name = 'khund_charcha'
-    paginate_by = 9
+    template_name = 'blog/education.html'
+    queryset = Post.objects.filter(catagoery='education')
+    context_object_name = 'education'
+    paginate_by = 15
 
 
-# for the english newspapers
-class english_dalies(ListView):
+# for the life_style
+class life_style(ListView):
     model = Post
-    template_name = 'blog/english_papers.html'
-    queryset = Post.objects.filter(catagoery = 'english_dalies')
-    context_object_name = 'english_dalies'
-    paginate_by = 9
+    template_name = 'blog/life_style.html'
+    queryset = Post.objects.filter(catagoery = 'life_style')
+    context_object_name = 'life_style'
+    paginate_by = 15
 
-# for english magazines
-class english_magazines(ListView):
+# for behaviour
+class Behaviour(ListView):
     model = Post
-    template_name = 'blog/english_magazines.html'
-    queryset = Post.objects.filter(catagoery = 'english_magazines')
-    context_object_name = 'english_magazines'
-    paginate_by = 9
+    template_name = 'blog/behaviour.html'
+    queryset = Post.objects.filter(catagoery = 'behaviour')
+    context_object_name = 'behaviour'
+    paginate_by = 15
 
-# Punjabi dalies
-class punjabi_dalies(ListView):
+# for psychology
+class Psychology(ListView):
     model = Post
-    template_name = 'blog/punjabi_dalies.html'
-    queryset = Post.objects.filter(catagoery= 'punjabi_dalies')
-    context_object_name = 'punjabi_dalies'
-    paginate_by = 9
+    template_name = 'blog/psychology.html'
+    queryset = Post.objects.filter(catagoery= 'psychology')
+    context_object_name = 'psychology'
+    paginate_by = 15
 
-# Punjabi Magazines
-class punjabi_magazines(ListView):
+# for language
+class Language(ListView):
     model = Post
-    template_name = 'blog/punjabi_magazine.html'
-    queryset = Post.objects.filter(catagoery='punjabi_magazines')
-    context_object_name = 'punjabi_magazines'
-    paginate_by = 9
+    template_name = 'blog/language.html'
+    queryset = Post.objects.filter(catagoery='language')
+    context_object_name = 'language'
+    paginate_by = 15
 
 def tagged(request, slug):
     tag = get_object_or_404(Tag, slug=slug)
