@@ -57,7 +57,7 @@ class Home_view(ListView):
     template_name = 'blog/home.html'
     context_object_name = 'posts'
     paginate_by = 15
-    queryset = Post.objects.all().order_by('-published_date')
+    queryset = Post.objects.filter(sub_catagoery='featured')
 
 # For the career tips
 class Career_Tips(ListView):

@@ -16,6 +16,12 @@ catagoery_choices = (
     ('psychology', 'PSYCHOLOGY'),
     ('language', 'LANGUAGE'),
     ('behaviour', 'BEHAVIOUR'),
+
+)
+
+featured = (
+    ('featured', 'FEATURED'),
+    ('not_featured', 'NOT_FEATURED'),
 )
 
 class Post(models.Model):
@@ -23,6 +29,7 @@ class Post(models.Model):
     discreption = models.CharField(max_length=130, null=True, blank=True)
     body = RichTextField(blank=True, null=True)
     catagoery = models.CharField(max_length = 100, choices=catagoery_choices, default='wednesday_weekly', null=True, blank=True)
+    sub_catagoery = models.CharField(max_length=100, choices=featured, default='not_featured', null=True)
     slug = models.SlugField(unique=True, max_length=100)
     tags = TaggableManager()
     created_date = models.DateTimeField(default=timezone.now)

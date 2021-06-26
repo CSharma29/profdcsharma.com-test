@@ -9,6 +9,7 @@ class Postform(forms.ModelForm):
             'title',
             'discreption',
             'catagoery',
+            'sub_catagoery',
             'tags',
             'body',
         ]

@@ -95,4 +95,27 @@
         }
     </script>
 
+    <!-- Scripts for facebbok and whatsapp share -->
+    <script>
+        function facebook_share(){
+  
+            let facebook_share_url = "http://www.facebook.com/sharer.php?u=" + window.location.href;
+            window.location.assign(facebook_share_url)
+            window.location=facebook_share_url   
+        }
+  
+        function whatsapp_share(){
+          let whatsapp_share_url = "whatsapp://send?text=" + "Hey checkout this amazing article on profdcsharma.com      ->" + window.location.href;
+          window.open(whatsapp_share_url)
+        }
+      </script>
+
+      <!-- Adding the google analytics application -->
+      {% load google_analytics_tags %}
+      <div style="display:none">
+          <img src="{% google_analytics %}" width="0" height="0" />
+      </div>
+      
+</html>
+
 </html>
