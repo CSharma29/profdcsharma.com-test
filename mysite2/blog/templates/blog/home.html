@@ -20,20 +20,22 @@
 
 <div class="post-container">
   {%for post in posts%}
-    <div class="post-container-child">
+    <div class="post-container-child w3-animate-zoom">
       <div id="post-title"> <a href="{%url 'blog:post_detail' post.slug %}"><h3><b>{{post.title}}</b></h3></a> </div>  
           <p style="text-align: left;">{{post.discreption}}</p>
           {%for tags in post.tags.all%}
             <a href="{%url 'blog:tagged' tags.slug %}"><span class = "tags">#{{tags}}</span> </a>
           {%endfor%}
           <br>
-          <a href="{%url 'blog:post_detail' post.slug %}" class="read-more text-primary"> Read Complete Article. </a>
+          <div id = "spacer"></div>
+          <a href="{%url 'blog:post_detail' post.slug %}" class="read-more text-primary"> Read Complete Article </a>
     </div>
   {%endfor%}
   
 </div>
 
-<footer>
+
+<footer id ="footer">
 <!-- The footer block which dosen't work -->
     {%if is_paginated %}
 
