@@ -37,6 +37,7 @@ body{
     /*border-radius: 20px;
     background-color: rgba(99, 165, 150, 0.274);*/
     bottom: 0;
+    color: #018786;
   }
 
   .topnav {
@@ -104,6 +105,7 @@ body{
       margin-top: 10px;
       align-items: center;
       margin-left: 45vw;
+      
       
       /*border-radius: 20px;
       background-color: beige;*/
@@ -310,6 +312,10 @@ body{
 {
   text-align: center;
   border-radius: 10px;
+  font-weight: 600;
+  font-size: 25px;
+  color: rgba(0, 0, 0, 0.712);
+  font-family: 'Times New Roman', Times, serif;
 }
 
 #facebook

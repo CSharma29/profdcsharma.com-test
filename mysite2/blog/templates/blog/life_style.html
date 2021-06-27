@@ -16,7 +16,7 @@
 <div class="post-container  w3-animate-zoom">
   {%for post in life_style %}
     <div class="post-container-child w3-animate-zoom">
-      <div id="post-title"> <a href="{%url 'blog:post_detail' post.slug %}"><h3><b>{{post.title}}</b></h3></a> </div>  
+      <div id="post-title"> <a href="{%url 'blog:post_detail' post.slug %}" id ="post-title"><h3><b>{{post.title}}</b></h3></a> </div>  
           <p style="text-align: left;">{{post.discreption}}</p>
           {%for tags in post.tags.all%}
             <a href="{%url 'blog:tagged' tags.slug %}"><span class = "tags">#{{tags}}</span> </a>
