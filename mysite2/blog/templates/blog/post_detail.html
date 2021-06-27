@@ -13,33 +13,56 @@
 
 {%block content%}
 
-<div class="post-detail-title"> {{post.title}} </div>
+<style>
+    button {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+}
+</style>
 
-<div class="social-media-parent">
-    <div class="social-media-share-buttons">
-        <div class="share-text"> Share On</div>
-        <button type="button" onclick="facebook_share()" id="facebook"> Facebook </button>
-        <button type="button" onclick="whatsapp_share()" id="whatsapp"> whatsapp </button>
-    </div>
+<div class="post-detail-title-parent" style="background-color: white;">
+
+    <div class="post-detail-title"> {{post.title}}
+</div>
+
+<div style="margin-top: -4vh;">
+    <span style="font-size: 13px; background-color: rgba(255, 255, 255, 0.808);" class="text-muted">Published by  Professor D.C Sharma in   
+    
+    {%for tags in post.tags.all%}
+        <a href="{%url 'blog:tagged' tags.slug %}"><span class = "tags" style="margin-left: 12px;">#{{tags}}  </span> </a>
+    {%endfor%} 
+      on // {{post.published_date}}
+</span>
+         
+</div>
+
+
 </div>
 
 <div class="post-detail-body">
     <div class="post-detail-content">
         {{post.body|safe}}
     </div>
-
+    <br>
     <div id ="post-deatil-social-media">
 
-        <strong><span style="padding: 10px;"> Follow us on </span> </strong>
-        <a href="https://www.facebook.com/dc.sharma.39948/" id ="facebook-base"><i class="fa fa-facebook-official w3-hover-opacity"></i> Facebook</a>
-        <a href="https://chat.whatsapp.com/FVWyasUIvSDIFwpIcrH3Fs" id="whatsapp-base"><i class="fa fa-whatsapp" aria-hidden="true"></i> whatsapp</a>
+        <strong><span> Share </span> </strong>
+        <button onclick=facebook_share() style="background-color: #3b5998"><i class="fa fa-facebook-official w3-hover-opacity"></i> Facebook</button>
+        <button onclick=whatsapp_share()><i class="fa fa-whatsapp" aria-hidden="true"></i> whatsapp</button>
     
     </div>
 </div>
 
 
 <div id ="fake-background">
-    <h2 class="related-posts-title"> Posts that you might like! </h2>
+    <h2 class="related-posts-title"> Post's that you might like! </h2>
 
     {%for rel_post in post_related%}
     <div class="related-posts">
@@ -57,16 +80,17 @@
 <img src="{%static 'blog/images/dc-image.jpg' %}" id = "topology-image">
 
 <div id ="topology-about">
-    Kangra based popular and prominent psychologist, counsellor, social reformer and an<br>
-    eminent advisor on general life and career based issues.
+    <a href ="{%url 'blog:about-us'%}">Professor D.C Sharma </a> is a career psychologist, linguist, counsellor, skill trainer, social reformer, life coach and a popular constructive<br> short story writer. He hold degrees for M. Sc. in (Psychology), M. S. in (counselling & psychotherapy),<br> Fellow of the Association of Professional Psychologists, Chennai. <br>
+    <div style="height: 2vh;"></div>
+    <strong><span> Get in Touch </span> </strong>
+    <div style="height: 2vh;"></div>
+    <ul>
+        <li> Send an email at careerking93@gmail.com</li>
+        <li> Follow us on <a href="https://www.facebook.com/dc.sharma.39948/" id ="facebook-base"><i class="fa fa-facebook-official w3-hover-opacity"></i> Facebook</a>
+        <a href="https://chat.whatsapp.com/FVWyasUIvSDIFwpIcrH3Fs" id="whatsapp-base"><i class="fa fa-whatsapp" aria-hidden="true"></i> whatsapp</a> to get latest updates. </li>
+        <li> Subscribe to our news-letter to get latest updates </li>
+    </ul>
 </div>
-
-<div>
-    Professor Sharma is an M. Sc. in Psychology, M. S. in counselling & psychotherapy, <br>
-    Fellow of the Association of Professional Psychologists, Chennai
-</div>
-
-
 
 
 </div>
