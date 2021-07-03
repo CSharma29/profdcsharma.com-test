@@ -60,7 +60,7 @@ class Home_view(ListView):
     model = Post
     template_name = 'blog/home.html'
     context_object_name = 'posts'
-    paginate_by = 15
+    paginate_by = 16
     queryset = Post.objects.filter(sub_catagoery='featured')
 
 # For the career tips
@@ -71,7 +71,7 @@ class Career_Tips(ListView):
     template_name = 'blog/career_tips.html'
     queryset = Post.objects.filter(catagoery="career_tips")
     context_object_name = 'career_tips'
-    paginate_by = 15
+    paginate_by = 16
 
 # For the education
 
@@ -81,7 +81,7 @@ class education(ListView):
     template_name = 'blog/education.html'
     queryset = Post.objects.filter(catagoery='education')
     context_object_name = 'education'
-    paginate_by = 15
+    paginate_by = 16
 
 
 # for the life_style
@@ -90,7 +90,7 @@ class life_style(ListView):
     template_name = 'blog/life_style.html'
     queryset = Post.objects.filter(catagoery='life_style')
     context_object_name = 'life_style'
-    paginate_by = 15
+    paginate_by = 16
 
 # for behaviour
 
@@ -100,7 +100,7 @@ class Behaviour(ListView):
     template_name = 'blog/behaviour.html'
     queryset = Post.objects.filter(catagoery='behaviour')
     context_object_name = 'behaviour'
-    paginate_by = 15
+    paginate_by = 16
 
 # for psychology
 
@@ -110,7 +110,7 @@ class Psychology(ListView):
     template_name = 'blog/psychology.html'
     queryset = Post.objects.filter(catagoery='psychology')
     context_object_name = 'psychology'
-    paginate_by = 15
+    paginate_by = 16
 
 # for language
 
@@ -120,7 +120,7 @@ class Language(ListView):
     template_name = 'blog/language.html'
     queryset = Post.objects.filter(catagoery='language')
     context_object_name = 'language'
-    paginate_by = 15
+    paginate_by = 16
 
 
 def tagged(request, slug):

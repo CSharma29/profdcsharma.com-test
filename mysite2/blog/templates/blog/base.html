@@ -6,6 +6,9 @@
 
 <head>
 
+    <!-- Adding the favicon-->
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+
     {%block SEO%}
     {%endblock%}
 
@@ -21,8 +24,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <!-- Adding the favicon-->
-    <link rel="icon" href="{% static 'favicon.ico' %}">
+
 
     <!-- Link to the local style sheets -->
     <link rel="stylesheet" href="{%static 'blog/css/styles.css'%}">
@@ -33,36 +35,37 @@
     <!-- Creating the navigation bar -->
     <div class="topnav" id="top-nav-bar">
         <a href="{%url 'blog:home'%}"> <i class="fa fa-home" aria-hidden="true"></i> Home </a>
+
+        <!-- For Behaviour -->
+        <a href="{%url 'blog:behaviour' %}">
+            Behavior
+        </a>
+
+
         <!-- Career tips-->
-        <a href="{%url 'blog:career_tips'%}"><i class="fa fa-envelope fa-fw w3-margin-right"
-                aria-hidden="true"></i>Career Tips</a>
+        <a href="{%url 'blog:career_tips'%}">Career Tips</a>
         <!-- Education tips -->
-        <a href="{%url 'blog:education'%}"><i class="fa fa-envelope fa-fw w3-margin-right" aria-hidden="true"></i>
+        <a href="{%url 'blog:education'%}">
             Education </a>
         <!-- Life Style -->
         <a href="{%url 'blog:life_style' %}">
-            <i class="fa fa-envelope fa-fw" aria-hidden="true"></i>
+
             Life Style
         </a>
 
+        <!-- For Language -->
+        <a href="{%url 'blog:language' %}">
+            Language
+        </a>
+
         <!-- For psychology -->
-        <a href="{%url 'blog:psychology' %}"> <i class="fa fa-envelope fa-fw " aria-hidden="true"></i>
+        <a href="{%url 'blog:psychology' %}">
             Psychology
         </a>
 
         <a href="{%url 'contact:contact_page'%}">
             <i class="fa fa-envelope fa-fw" aria-hidden="true"></i>
             Contact
-        </a>
-
-        <!-- For Language -->
-        <a href="{%url 'blog:language' %}"> <i class="fa fa-envelope fa-fw " aria-hidden="true"></i>
-            Language
-        </a>
-
-        <!-- For Behaviour -->
-        <a href="{%url 'blog:behaviour' %}"> <i class="fa fa-envelope fa-fw " aria-hidden="true"></i>
-            Behaviour
         </a>
 
         {%if user.is_authenticated%}
@@ -77,7 +80,7 @@
 
     </div>
 
-    <!-- Bloc header -->
+    <!-- Block header -->
     <header>
         {%block header%}
         {%endblock%}
@@ -125,8 +128,10 @@
 
 <!-- The footer of the page-->
 <footer>
-    {%block footer%}
-    {%endblock%}
+    <div id="fake-background" style="display: grid; place-items: center;">
+        {%block footer%}
+        {%endblock%}
+    </div>
 </footer>
 
 </html>
