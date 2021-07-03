@@ -19,7 +19,7 @@ from taggit.models import Tag
 class new_post(LoginRequiredMixin, View):
     # Defining the templates and the initial fiels values
     template_name = "blog/new_post.html"
-    raise_exception=True
+    raise_exception = True
     permission_denied_message = "You are not allowed here"
     form_class = Postform
     initial = {
@@ -29,7 +29,7 @@ class new_post(LoginRequiredMixin, View):
     }
 
     def get(self, request):
-        form = self.form_class(initial = self.initial)
+        form = self.form_class(initial=self.initial)
         return render(request, self.template_name, {'form': form})
 
     def post(self, request):
@@ -44,13 +44,17 @@ class new_post(LoginRequiredMixin, View):
         return render(request, self.template_name, {'form': form})
 
 # The view to update the post have to work on the same.
-class Update_post(LoginRequiredMixin,UpdateView):
-    model= Post
+
+
+class Update_post(LoginRequiredMixin, UpdateView):
+    model = Post
     template_name = 'blog/update_post.html'
     fields = {'title', 'discreption', 'tags', 'body'}
 
+
 class about_us(ListView):
-    template_name = 'blog/about_us.html'    
+    template_name = 'blog/about_us.html'
+
 
 class Home_view(ListView):
     model = Post
@@ -60,6 +64,8 @@ class Home_view(ListView):
     queryset = Post.objects.filter(sub_catagoery='featured')
 
 # For the career tips
+
+
 class Career_Tips(ListView):
     model = Post
     template_name = 'blog/career_tips.html'
@@ -68,6 +74,8 @@ class Career_Tips(ListView):
     paginate_by = 15
 
 # For the education
+
+
 class education(ListView):
     model = Post
     template_name = 'blog/education.html'
@@ -80,33 +88,40 @@ class education(ListView):
 class life_style(ListView):
     model = Post
     template_name = 'blog/life_style.html'
-    queryset = Post.objects.filter(catagoery = 'life_style')
+    queryset = Post.objects.filter(catagoery='life_style')
     context_object_name = 'life_style'
     paginate_by = 15
 
 # for behaviour
+
+
 class Behaviour(ListView):
     model = Post
     template_name = 'blog/behaviour.html'
-    queryset = Post.objects.filter(catagoery = 'behaviour')
+    queryset = Post.objects.filter(catagoery='behaviour')
     context_object_name = 'behaviour'
     paginate_by = 15
 
 # for psychology
+
+
 class Psychology(ListView):
     model = Post
     template_name = 'blog/psychology.html'
-    queryset = Post.objects.filter(catagoery= 'psychology')
+    queryset = Post.objects.filter(catagoery='psychology')
     context_object_name = 'psychology'
     paginate_by = 15
 
 # for language
+
+
 class Language(ListView):
     model = Post
     template_name = 'blog/language.html'
     queryset = Post.objects.filter(catagoery='language')
     context_object_name = 'language'
     paginate_by = 15
+
 
 def tagged(request, slug):
     tag = get_object_or_404(Tag, slug=slug)
@@ -119,6 +134,7 @@ def tagged(request, slug):
     }
     return render(request, 'blog/home.html', context)
 
+
 def post_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
     post_related = post.tags.similar_objects()[:8]
@@ -130,6 +146,7 @@ def post_detail(request, slug):
 
 # Creating views for the corona functionality
 
+
 class corona_post(View):
     template_name = "blog/corona_help.html"
     form_class = Corona_help_form
@@ -140,7 +157,7 @@ class corona_post(View):
     }
 
     def get(self, request):
-        form = self.form_class(initial = self.initial)
+        form = self.form_class(initial=self.initial)
         return render(request, self.template_name, {'form': form})
 
     def post(self, request):
@@ -151,15 +168,18 @@ class corona_post(View):
             return redirect('blog:help_list')
         return render(request, self.template_name, {'form': form})
 
+
 class corona_help_posts(ListView):
     model = corona_help
     template_name = 'blog/corona_help_list.html'
     queryset = corona_help.objects.all()
     context_object_name = 'corona_help'
 
+
 class corona_help_detail_view(DetailView):
     model = corona_help
-    template_name= 'blog/help_detail.html'
+    template_name = 'blog/help_detail.html'
+
 
 class about_us(TemplateView):
     template_name = 'blog/about-us.html'

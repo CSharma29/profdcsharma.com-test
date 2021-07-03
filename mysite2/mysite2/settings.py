@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'crispy_forms',
     'google_analytics',
+    'contact'
 ]
 
 MIDDLEWARE = [

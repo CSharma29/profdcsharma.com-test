@@ -23,6 +23,7 @@ from django.urls.conf import re_path
 urlpatterns = [
     path('pappuadmin/', admin.site.urls),
     path('', include('blog.urls')),
+    path('contact/', include('contact.urls')),
     re_path('djga/', include('google_analytics.urls')),
 ]
 

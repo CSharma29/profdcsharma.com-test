@@ -1,7 +1,7 @@
 {%extends "blog/base.html"%}
 
 {%block SEO%}
-<title> Khund_charcha </title>
+<title> Education|Prof. DC Sharma </title>
 <meta name="description" content = "Get the latest from us every sunday in punjabi, join us for khund charcha this sunday">
 {%endblock%}
 {%block header%}
@@ -22,14 +22,15 @@
           {%endfor%}
           <br>
           <div id = "spacer"></div>
-          <a href="{%url 'blog:post_detail' post.slug %}" class="read-more text-primary"> Read Complete Article.</a>
+          <!--<a href="{%url 'blog:post_detail' post.slug %}" class="read-more text-primary"> Read Complete Article.</a>-->
     </div>
   {%endfor%}
   
 </div>
 
+{%endblock%}
 
-<footer>
+{%block footer%}
 <!-- The footer block which dosen't work -->
   {%if is_paginated %}
 
@@ -54,5 +55,4 @@
     {%endif%}
 
   {%endif%}
-</footer>
 {%endblock%}

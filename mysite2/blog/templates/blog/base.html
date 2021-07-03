@@ -2,120 +2,131 @@
 
 <!DOCTYPE html>
 
-<html lang = "english">
-    <head>
+<html lang="english">
 
-        {%block SEO%}
-        {%endblock%}
+<head>
 
-        <!-- Loading the meta view port -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-        <!-- the title block -->
-        {%block title%}
-        {%endblock%}
+    {%block SEO%}
+    {%endblock%}
 
-        <!-- Linking to the bootstrap stylesheet -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- Loading the meta view port -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-         <!-- Adding the favicon-->
-         <link rel="icon"href="{% static 'favicon.ico' %}">
+    <!-- the title block -->
+    {%block title%}
+    {%endblock%}
 
-         <!-- Link to the local style sheets -->
-         <link rel="stylesheet" href="{%static 'blog/css/styles.css'%}">
-    </head>
+    <!-- Linking to the bootstrap stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <body>
-        
-        <!-- Creating the navigation bar -->
-<div class="topnav" id="top-nav-bar">
-    <a href = "{%url 'blog:home'%}"> <i class="fa fa-home" aria-hidden="true"></i> Home </a>
-    <!-- Career tips-->
-    <a href = "{%url 'blog:career_tips'%}"><i class="fa fa-envelope fa-fw w3-margin-right" aria-hidden="true"></i>Career Tips</a>
-    <!-- Education tips -->
-    <a href="{%url 'blog:education'%}"><i class="fa fa-envelope fa-fw w3-margin-right" aria-hidden="true"></i> Education </a>
-    <!-- Life Style -->
-    <a href = "{%url 'blog:life_style' %}">
-        <i class="fa fa-envelope fa-fw" aria-hidden="true"></i>
-        Life Style
-    </a>
+    <!-- Adding the favicon-->
+    <link rel="icon" href="{% static 'favicon.ico' %}">
 
-    <!-- For psychology -->
-    <a href="{%url 'blog:psychology' %}"> <i class="fa fa-envelope fa-fw " aria-hidden="true"></i>
-        Psychology
-    </a>
+    <!-- Link to the local style sheets -->
+    <link rel="stylesheet" href="{%static 'blog/css/styles.css'%}">
+</head>
 
-    <!-- For Language -->
-    <a href="{%url 'blog:language' %}"> <i class="fa fa-envelope fa-fw " aria-hidden="true"></i>
-        Language
-    </a>
+<body>
 
-    <!-- For Behaviour -->
-    <a href="{%url 'blog:behaviour' %}"> <i class="fa fa-envelope fa-fw " aria-hidden="true"></i>
-        Behaviour
-    </a>
-
-    {%if user.is_authenticated%}
-
-    <a href="{%url 'blog:add_new'%}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-plus-circle fa-fw w3-margin-right" aria-hidden="true"></i>Add a new post</a>
-    
-    {%endif%}
-
-    <a class="icon" onclick="myFunction()"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+    <!-- Creating the navigation bar -->
+    <div class="topnav" id="top-nav-bar">
+        <a href="{%url 'blog:home'%}"> <i class="fa fa-home" aria-hidden="true"></i> Home </a>
+        <!-- Career tips-->
+        <a href="{%url 'blog:career_tips'%}"><i class="fa fa-envelope fa-fw w3-margin-right"
+                aria-hidden="true"></i>Career Tips</a>
+        <!-- Education tips -->
+        <a href="{%url 'blog:education'%}"><i class="fa fa-envelope fa-fw w3-margin-right" aria-hidden="true"></i>
+            Education </a>
+        <!-- Life Style -->
+        <a href="{%url 'blog:life_style' %}">
+            <i class="fa fa-envelope fa-fw" aria-hidden="true"></i>
+            Life Style
         </a>
 
-</div>
+        <!-- For psychology -->
+        <a href="{%url 'blog:psychology' %}"> <i class="fa fa-envelope fa-fw " aria-hidden="true"></i>
+            Psychology
+        </a>
 
-<!-- Bloc header -->
-<header>
-    {%block header%}
+        <a href="{%url 'contact:contact_page'%}">
+            <i class="fa fa-envelope fa-fw" aria-hidden="true"></i>
+            Contact
+        </a>
+
+        <!-- For Language -->
+        <a href="{%url 'blog:language' %}"> <i class="fa fa-envelope fa-fw " aria-hidden="true"></i>
+            Language
+        </a>
+
+        <!-- For Behaviour -->
+        <a href="{%url 'blog:behaviour' %}"> <i class="fa fa-envelope fa-fw " aria-hidden="true"></i>
+            Behaviour
+        </a>
+
+        {%if user.is_authenticated%}
+
+        <a href="{%url 'blog:add_new'%}" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+                class="fa fa-plus-circle fa-fw w3-margin-right" aria-hidden="true"></i>Add a new post</a>
+
+        {%endif%}
+
+        <a class="icon" onclick="myFunction()"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
+        </a>
+
+    </div>
+
+    <!-- Bloc header -->
+    <header>
+        {%block header%}
+        {%endblock%}
+    </header>
+
+    <!-- Block content -->
+
+    {%block content%}
     {%endblock%}
-</header>
-
-<!-- Block content -->
-        
-   {%block content%}
-   {%endblock%}
 </body>
 
-    <!-- Adding the scripts here -->
-    <script>
-        function myFunction() 
-        {
-            var x = document.getElementById("top-nav-bar");
-            if (x.className === "topnav") 
-            {
-                x.className += " responsive";
-            } 
-            else 
-            {
-                x.className = "topnav";
-            }
+<!-- Adding the scripts here -->
+<script>
+    function myFunction() {
+        var x = document.getElementById("top-nav-bar");
+        if (x.className === "topnav") {
+            x.className += " responsive";
         }
-    </script>
+        else {
+            x.className = "topnav";
+        }
+    }
+</script>
 
-    <!-- Scripts for facebbok and whatsapp share -->
-    <script>
-        function facebook_share(){
-  
-            let facebook_share_url = "http://www.facebook.com/sharer.php?u=" + window.location.href;
-            window.location.assign(facebook_share_url)
-            window.location=facebook_share_url   
-        }
-  
-        function whatsapp_share(){
-          let whatsapp_share_url = "whatsapp://send?text=" + "Hey checkout this amazing article on profdcsharma.com      ->" + window.location.href;
-          window.open(whatsapp_share_url)
-        }
-      </script>
+<!-- Scripts for facebbok and whatsapp share -->
+<script>
+    function facebook_share() {
 
-      <!-- Adding the google analytics application -->
-      {% load google_analytics_tags %}
-      <div style="display:none">
-          <img src="{% google_analytics %}" width="0" height="0" />
-      </div>
-      
-</html>
+        let facebook_share_url = "http://www.facebook.com/sharer.php?u=" + window.location.href;
+        window.location.assign(facebook_share_url)
+        window.location = facebook_share_url
+    }
+
+    function whatsapp_share() {
+        let whatsapp_share_url = "whatsapp://send?text=" + "Hey checkout this amazing article on profdcsharma.com      ->" + window.location.href;
+        window.open(whatsapp_share_url)
+    }
+</script>
+
+<!-- Adding the google analytics application -->
+{% load google_analytics_tags %}
+<div style="display:none">
+    <img src="{% google_analytics %}" width="0" height="0" />
+</div>
+
+<!-- The footer of the page-->
+<footer>
+    {%block footer%}
+    {%endblock%}
+</footer>
 
 </html>
