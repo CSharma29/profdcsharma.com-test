@@ -18,7 +18,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # In production use path /etc/config.json
-with open("F:\kangra_project\djangoprofdcsharma_com5\mysite2\config.json") as config_file:
+with open("/etc/config.json") as config_file:
     config = json.load(config_file)
 
 # Quick-start development settings - unsuitable for production
@@ -28,7 +28,7 @@ with open("F:\kangra_project\djangoprofdcsharma_com5\mysite2\config.json") as co
 SECRET_KEY = config['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['profdcsharma.com','192.46.211.216', '127.0.0.1']
 
