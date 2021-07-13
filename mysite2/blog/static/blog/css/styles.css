@@ -415,8 +415,9 @@ body {
 {
     #img
   {
-    object-fit: cover;
+    display: flex;
     height: auto;
+    width: 100vw;
   }
 }
 
