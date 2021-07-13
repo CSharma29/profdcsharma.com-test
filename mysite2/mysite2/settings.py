@@ -28,7 +28,7 @@ with open("/etc/config.json") as config_file:
 SECRET_KEY = config['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['profdcsharma.com','192.46.211.216', '127.0.0.1']
 
