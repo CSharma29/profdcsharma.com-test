@@ -415,11 +415,8 @@ body {
 {
     #img
   {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    object-fit: cover;
     height: auto;
-    width: 50% ;
   }
 }
 
