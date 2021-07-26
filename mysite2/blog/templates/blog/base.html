@@ -36,10 +36,10 @@
     <div class="topnav" id="top-nav-bar">
         <a href="{%url 'blog:home'%}"> <i class="fa fa-home" aria-hidden="true"></i> Home </a>
 
-        <!-- For Behaviour -->
+        <!-- For Behaviour
         <a href="{%url 'blog:behaviour' %}">
             Behavior
-        </a>
+        </a> -->
 
 
         <!-- Career tips-->
@@ -47,16 +47,19 @@
         <!-- Education tips -->
         <a href="{%url 'blog:education'%}">
             Education </a>
-        <!-- Life Style -->
+
+        <!-- Coomented navigation not for use -->
+
+        <!-- Life Style
         <a href="{%url 'blog:life_style' %}">
 
             Life Style
         </a>
 
-        <!-- For Language -->
+         For Language
         <a href="{%url 'blog:language' %}">
             Language
-        </a>
+        </a> -->
 
         <!-- For psychology -->
         <a href="{%url 'blog:psychology' %}">
@@ -66,6 +69,10 @@
         <a href="{%url 'contact:contact_page'%}">
             <i class="fa fa-envelope fa-fw" aria-hidden="true"></i>
             Contact
+        </a>
+
+        <a href="{%url 'blog:about-us'%}">
+            About
         </a>
 
         {%if user.is_authenticated%}
