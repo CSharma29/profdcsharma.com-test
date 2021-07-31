@@ -7,6 +7,7 @@ from django.dispatch import receiver
 from django.utils import timezone
 from ckeditor.fields import RichTextField
 from uuid import uuid4
+from django.urls import reverse
 # Create your models here.
 
 catagoery_choices = (
@@ -41,6 +42,9 @@ class Post(models.Model):
     
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('blog:post_detail', args=[str(self.id)])
 
 class corona_help(models.Model):
     title = models.CharField(max_length=300, blank=False, null=False)
