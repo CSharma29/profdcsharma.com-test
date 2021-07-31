@@ -18,7 +18,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # In production use path /etc/config.json
-with open("/etc/config.josn") as config_file:
+with open("/etc/config.json") as config_file:
     config = json.load(config_file)
 
 # Quick-start development settings - unsuitable for production
