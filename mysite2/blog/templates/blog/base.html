@@ -13,7 +13,7 @@
     {%endblock%}
 
     <!-- Adding the pintrest meta -->
-    <meta name="p:domain_verify" content="3714f8d56b6a89178ace7e5e1ee6263c"/>
+    <meta name="p:domain_verify" content="3714f8d56b6a89178ace7e5e1ee6263c" />
 
     <!-- Loading the meta view port -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -128,6 +128,36 @@
         let whatsapp_share_url = "whatsapp://send?text=" + "Hey checkout this amazing article on profdcsharma.com      ->" + window.location.href;
         window.open(whatsapp_share_url)
     }
+
+</script>
+
+<!-- Adding the messanger code -->
+
+<div id="fb-root"></div>
+
+<!-- Your Chat plugin code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+
+<script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "104593098433972");
+    chatbox.setAttribute("attribution", "biz_inbox");
+
+    window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: 'v11.0'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
 </script>
 
 <!-- Adding the google analytics application -->
